@@ -20,6 +20,10 @@ public final class ServidorWeb {
             SolicitudHttp solicitud = new SolicitudHttp(client);
 
             // Crea un nuevo hilo para procesar la solicittud.
+            Thread hilo = new Thread(solicitud);
+
+            // Inicia el hilo.
+            hilo.start();
 
         }
 
